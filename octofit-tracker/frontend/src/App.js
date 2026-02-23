@@ -1,5 +1,11 @@
-import logo from '../public/octofitapp-small.png';
+import logo from './octofitapp-small.png';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Activities from './components/Activities';
+import Leaderboard from './components/Leaderboard';
+import Teams from './components/Teams';
+import Users from './components/Users';
+import Workouts from './components/Workouts';
 
 function App() {
   return (
@@ -37,6 +43,14 @@ function App() {
       </div>
     </Router>
   );
+// Bootstrap card wrapper for main content
+const CardWrapper = ({ children }) => (
+  <div className="card mt-4">
+    <div className="card-body">
+      {children}
+    </div>
+  </div>
+);
 }
 
 // Bootstrap card wrapper for main content
